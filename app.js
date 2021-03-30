@@ -20,6 +20,8 @@ app.post('/sendDangky',(req,res)=>{
     // res.end();
 })
 
+var img = require('path').join(__dirname, '/img');
+app.use(express.static(img));
 
 app.get('/register',(req,res)=>{
     res.render('dangky')
